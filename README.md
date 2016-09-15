@@ -1,2 +1,5 @@
 # angular2-food
-Angular 2.0 test
+
+Clone repository and run `npm install` and after `npm start`.<p>
+
+Tutorial: https://angular.io/docs/ts/latest/tutorial/
