@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
-
-export class Plate {
-  id: number;
-  name: string;
-}
+import { Plate } from './plate';
 
 const FOOD: Plate[] = [
 	{ id: 11, name: 'Hamburguer' },
@@ -25,13 +21,8 @@ const FOOD: Plate[] = [
 			<span class="badge">{{plate.id}}</span> {{plate.name}}
 			</li>
 			</ul>
-			<div *ngIf="selectedPlate">
-			<h2>{{selectedPlate.name}} details!</h2>
-			<div><label>id: </label>{{selectedPlate.id}}</div>
-			<div><label>name: </label>
-			<input [(ngModel)]="selectedPlate.name" placeholder="name" />
-			</div>
-			</div>`,
+			<my-plate-detail [plate]="selectedPlate"></my-plate-detail>
+			`,
 	styles: [`
 		  .selected {
 		    background-color: #CFD8DC !important;
